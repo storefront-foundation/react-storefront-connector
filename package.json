@@ -1,0 +1,14 @@
+{
+  "name": "react-storefront-connector",
+  "version": "0.0.0",
+  "description": "Interfaces for creating a React Storefront connector.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --watch"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}
