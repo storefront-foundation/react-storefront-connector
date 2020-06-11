@@ -10,6 +10,7 @@ import SearchParams from './SearchParams'
 import SearchResult from './SearchResult'
 import CmsSlots from './CmsSlots'
 import ProductSlotsParams from './ProductSlotsParams'
+import Route from './Route'
 
 export default interface Connector {
   /**
@@ -60,4 +61,9 @@ export default interface Connector {
    * Searches for matching products
    */
   search: (params: SearchParams, req: Request, response: Response) => Promise<Result<SearchResult>>
+
+  /**
+   * Routing rules that map express-style path expressions to
+   */
+  routes: Route[]
 }
