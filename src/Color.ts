@@ -11,11 +11,11 @@ export default interface Color {
    */
   text: string
   /**
-   * A CSS color value for the swatch
+   * A CSS color value for the swatch. Use either `color` or `image`.
    */
-  css?: string
+  color?: string
   /**
-   * The color swatch
+   * An image for the watch. Use either `color` or `image`.
    */
   image?: Media
   /**
