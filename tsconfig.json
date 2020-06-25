@@ -9,7 +9,7 @@
   "typedocOptions": {
     "mode": "modules",
     "out": "docs",
-    "name": "react-storefront-connector",
+    "name": "React Storefront Connector",
     "theme": "./theme"
   }
 }
