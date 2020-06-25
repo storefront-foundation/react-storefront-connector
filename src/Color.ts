@@ -1,6 +1,9 @@
 import Media from './Media'
 import ProductMedia from './ProductMedia'
 
+/**
+ * Represents a product color option.
+ */
 export default interface Color {
   /**
    * The color code

@@ -4,11 +4,19 @@
   "description": "Interfaces for creating a React Storefront connector.",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "docs": "typedoc"
   },
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
+    "husky": "^4.2.5",
+    "typedoc": "^0.17.7",
     "typescript": "^3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run docs"
+    }
   }
 }

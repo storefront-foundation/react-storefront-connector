@@ -1,0 +1,185 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>react-storefront-connector</title>
+	<meta name="description" content="Documentation for react-storefront-connector">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">react-storefront-connector</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>react-storefront-connector</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#overview" id="overview" style="color: inherit; text-decoration: none;">
+					<h1>Overview</h1>
+				</a>
+				<p>This package contains the inferfaces that you must implement to create a connector for <a href="https://docs.reactstorefront.io/">React Storefront</a>. Connectors allow developers to easily create a React Storefront front-end for popular ecommerce platforms such as Magento.</p>
+				<p>The main interface is <a href="interfaces/_connector_.connector.html">Connector</a>. For a reference implementation see <a href="https://github.com/react-storefront-community/magento2-connector">react-storefront-magento2-connector</a>.</p>
+				<a href="#core-concepts" id="core-concepts" style="color: inherit; text-decoration: none;">
+					<h2>Core Concepts</h2>
+				</a>
+				<ul>
+					<li>Each <code>Connector</code> method represents an API called made by a typical React Storefront application. </li>
+					<li>Most methods returns a <code>Result</code>, which contains both app and page level data. App data is used to populate the main menu, navigation tabs, etc..., while page data is used to render the main body the specific page being viewed (product data, category data, etc...).</li>
+					<li>App level data only needs to be included when connector methods are called during server-side rendering. During server-side rendering, the request will contain the <code>_includeAppData=1</code> query parameter. The <code>react-storefront</code> package provides <a href="https://docs.reactstorefront.io/apiReference/props/fulfillAPIRequest">fulfillAPIRequest</a> method to help you return app data only during server-side rendering. You can see it in use in <code>react-storefront-magento2-connector</code> in the <a href="https://github.com/react-storefront-community/magento2-connector/blob/master/src/app/withAppData.js#L5">withAppData higher-order function</a>, which is used connector methods like <a href="https://github.com/react-storefront-community/magento2-connector/blob/master/src/product/product.js#L6">product</a>.</li>
+					<li>Connectors can contain additional methods beyond those specified in <code>react-storefront-connector</code>, but the default React Storefront starter app won&#39;t make use of them. Developers will need to add functionality to the app to take advantage of additional methods in the connector.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_appdata_.html">&quot;<wbr>App<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_cmsslots_.html">&quot;<wbr>Cms<wbr>Slots&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_color_.html">&quot;<wbr>Color&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_connector_.html">&quot;<wbr>Connector&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_homepagedata_.html">&quot;<wbr>Home<wbr>Page<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_link_.html">&quot;<wbr>Link&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_media_.html">&quot;<wbr>Media&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_menuitem_.html">&quot;<wbr>Menu<wbr>Item&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_productmedia_.html">&quot;<wbr>Product<wbr>Media&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_productpagedata_.html">&quot;<wbr>Product<wbr>Page<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_productparams_.html">&quot;<wbr>Product<wbr>Params&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_productslotsparams_.html">&quot;<wbr>Product<wbr>Slots<wbr>Params&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_productsummary_.html">&quot;<wbr>Product<wbr>Summary&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_result_.html">&quot;<wbr>Result&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_route_.html">&quot;<wbr>Route&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_searchparams_.html">&quot;<wbr>Search<wbr>Params&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_searchresult_.html">&quot;<wbr>Search<wbr>Result&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_searchsuggestions_.html">&quot;<wbr>Search<wbr>Suggestions&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_session_.html">&quot;<wbr>Session&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_size_.html">&quot;<wbr>Size&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_subcategorypagedata_.html">&quot;<wbr>Subcategory<wbr>Page<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_subcategoryparams_.html">&quot;<wbr>Subcategory<wbr>Params&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_index_.html">&quot;index&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

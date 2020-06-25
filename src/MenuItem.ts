@@ -1,3 +1,6 @@
+/**
+ * Represents a single item in the app's main menu.
+ */
 export default interface MenuItem {
   /**
    * Text for the menu item

@@ -1,5 +1,8 @@
 import Media from './Media'
 
+/**
+ * Represents a link to another page.
+ */
 export default interface Link {
   /**
    * Text to display
