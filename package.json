@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "tsc --watch",
-    "docs": "typedoc"
+    "docs": "typedoc; git add docs"
   },
   "author": "",
   "license": "Apache-2.0",
