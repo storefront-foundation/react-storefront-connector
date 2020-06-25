@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "tsc --watch",
     "docs": "typedoc; git add docs",
-    "release": "tsc; cp package.json README.md dist; npm publish"
+    "release": "tsc; cp package.json README.md dist; cd dist; npm publish"
   },
   "author": "",
   "license": "Apache-2.0",
