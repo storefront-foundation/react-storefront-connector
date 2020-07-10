@@ -5,7 +5,7 @@ export default interface MenuItem {
   /**
    * Text for the menu item
    */
-  text: string
+  text?: string
   /**
    * The URL of an image to display to the left of the text
    */
