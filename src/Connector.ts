@@ -12,6 +12,7 @@ import CmsSlots from './CmsSlots'
 import ProductSlotsParams from './ProductSlotsParams'
 import Route from './Route'
 import CartResponse from './CartResponse'
+import Cart from './Cart'
 
 /**
  * The main connector interface. An implementation of this interface should be the default export from your
@@ -70,7 +71,17 @@ export default interface Connector {
   /**
    * Adds product to cart
    */
-  addToCart: (req: Request, response: Response) => Promise<CartResponse>
+  addToCart: (
+    product: Product,
+    quantity: number,
+    req: Request,
+    response: Response
+  ) => Promise<CartResponse>
+
+  /**
+   * Updates the products in the cart
+   */
+  updateCart: (cart: Cart, req: Request, response: Response) => Promise<CartResponse>
 
   /**
    * Searches for matching products
