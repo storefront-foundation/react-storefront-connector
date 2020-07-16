@@ -13,6 +13,7 @@ import ProductSlotsParams from './ProductSlotsParams'
 import Route from './Route'
 import CartResponse from './CartResponse'
 import CartItem from './CartItem'
+import SignUpData from './SignUpData'
 
 /**
  * The main connector interface. An implementation of this interface should be the default export from your
@@ -22,23 +23,29 @@ export default interface Connector {
   /**
    * Returns data for the home page
    */
-  home: (req: Request, response: Response) => Promise<Result<HomePageData>>
+  home: (request: Request, response: Response) => Promise<Result<HomePageData>>
 
   /**
    * Returns data for the PLP
+   * @param params Criteria used to look up the subcategory
+   * @param request The http request
+   * @param response The http response
    */
   subcategory: (
     params: SubcategoryParams,
-    req: Request,
+    request: Request,
     response: Response
   ) => Promise<Result<SubcategoryPageData>>
 
   /**
    * Returns data for the PDP
+   * @param params Criteria used to look up the product and variant
+   * @param request The http request
+   * @param response The http response
    */
   product: (
     params: ProductParams,
-    req: Request,
+    request: Request,
     response: Response
   ) => Promise<Result<ProductPageData>>
 
@@ -46,61 +53,118 @@ export default interface Connector {
    * Returns the HTML for a late-loaded CMS slot on the product page.  For example,
    * it's common to late load reviews as an HTML blob retrieved from a 3rd party review provider.
    */
-  productSlots: (params: ProductSlotsParams, req: Request, res: Response) => CmsSlots
+  productSlots: (params: ProductSlotsParams, request: Request, res: Response) => CmsSlots
 
   /**
-   * Returns suggested products
+   * Returns suggested products based on a product being viewed
+   * @param id The product id
+   * @param request The http request
+   * @param response The http response
    */
-  productSuggestions: (id: string, req: Request, response: Response) => Promise<Product[]>
+  productSuggestions: (id: string, request: Request, response: Response) => Promise<Product[]>
 
   /**
    * Returns suggestions based on the user's search text
+   * @param query The user's search text
+   * @param request The http request
+   * @param response The http response
    */
-  searchSuggestions: (query: string, req: Request, response: Response) => Promise<SearchSuggestions>
+  searchSuggestions: (
+    query: string,
+    request: Request,
+    response: Response
+  ) => Promise<SearchSuggestions>
 
   /**
    * Retreives session information
+   * @param request The http request
+   * @param response The http response
    */
-  session: (req: Request, response: Response) => Promise<Session>
+  session: (request: Request, response: Response) => Promise<Session>
 
   /**
    * Returns data for the cart page
+   * @param request The http request
+   * @param response The http response
    */
-  cart: (req: Request, response: Response) => Promise<Result<CartResponse>>
+  cart: (request: Request, response: Response) => Promise<Result<CartResponse>>
 
   /**
    * Adds product to cart
+   * @param product the product to add
+   * @param quantity the quantity of product to add
+   * @param request The http request
+   * @param response The http response
    */
   addToCart: (
     product: Product,
     quantity: number,
-    req: Request,
+    request: Request,
     response: Response
   ) => Promise<CartResponse>
 
   /**
-   * Updates the products in the cart
+   * Updates an item in the cart
+   * @param item The item to update
+   * @param quantity The new quantity to apply
+   * @param request The http request
+   * @param response The http response
    */
   updateCart: (
     item: CartItem,
     quantity: number,
-    req: Request,
+    request: Request,
     response: Response
   ) => Promise<CartResponse>
 
   /**
    * Removes item in the cart
+   * @param item The item to remove
+   * @param request The http request
+   * @param response The http response
    */
-  removeCartItem: (
-    item: CartItem,
-    req: Request,
-    response: Response
-  ) => Promise<CartResponse>
+  removeCartItem: (item: CartItem, request: Request, response: Response) => Promise<CartResponse>
 
   /**
    * Searches for matching products
+   * @param request The http request
+   * @param response The http response
    */
-  search: (params: SearchParams, req: Request, response: Response) => Promise<Result<SearchResult>>
+  search: (
+    params: SearchParams,
+    request: Request,
+    response: Response
+  ) => Promise<Result<SearchResult>>
+
+  /**
+   * Signs the user in to their account
+   * @param email
+   * @param password
+   * @param request The http request
+   * @param response The http response
+   * @return data to apply to the session
+   */
+  signIn: (
+    email: string,
+    password: string,
+    request: Request,
+    response: Response
+  ) => Promise<Session>
+
+  /**
+   * Signs the user out
+   * @param request The http request
+   * @param response The http response
+   */
+  signOut: (request: Request, response: Response) => Promise<Session>
+
+  /**
+   * Signs the user up for an account
+   * @param data Data to apply when creating the account
+   * @param request The http request
+   * @param response The http response
+   */
+  signUp: (data: SignUpData, request: Request, response: Response) => Promise<Session>
 
   /**
    * Routing rules that map express-style path expressions to next.js page routes. Use routes to map

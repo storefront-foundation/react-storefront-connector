@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "watch": "tsc --watch",
+    "build": "tsc; cp package.json README.md dist;",
+    "push-build": "npm run build && cd dist && yalc push",
     "docs": "typedoc; git add docs",
-    "release": "tsc; cp package.json README.md dist; cd dist; npm publish"
+    "release": "npm run build && cd dist && npm publish"
   },
   "author": "",
   "license": "Apache-2.0",
