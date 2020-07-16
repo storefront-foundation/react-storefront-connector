@@ -1,6 +1,6 @@
 {
   "name": "react-storefront-connector",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Interfaces for creating a React Storefront connector.",
   "main": "index.js",
   "scripts": {

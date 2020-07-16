@@ -21,4 +21,8 @@ export default interface SubcategoryPageData extends SearchResult {
    * A list of menu items for navigation from landing pages
    */
   navMenu?: MenuItem[]
+  /**
+   * Defines if the page is landing
+   */
+  isLanding?: boolean
 }

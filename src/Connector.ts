@@ -11,6 +11,8 @@ import SearchResult from './SearchResult'
 import CmsSlots from './CmsSlots'
 import ProductSlotsParams from './ProductSlotsParams'
 import Route from './Route'
+import CartResponse from './CartResponse'
+import CartItem from './CartItem'
 
 /**
  * The main connector interface. An implementation of this interface should be the default export from your
@@ -60,6 +62,40 @@ export default interface Connector {
    * Retreives session information
    */
   session: (req: Request, response: Response) => Promise<Session>
+
+  /**
+   * Returns data for the cart page
+   */
+  cart: (req: Request, response: Response) => Promise<Result<CartResponse>>
+
+  /**
+   * Adds product to cart
+   */
+  addToCart: (
+    product: Product,
+    quantity: number,
+    req: Request,
+    response: Response
+  ) => Promise<CartResponse>
+
+  /**
+   * Updates the products in the cart
+   */
+  updateCart: (
+    item: CartItem,
+    quantity: number,
+    req: Request,
+    response: Response
+  ) => Promise<CartResponse>
+
+  /**
+   * Removes item in the cart
+   */
+  removeCartItem: (
+    item: CartItem,
+    req: Request,
+    response: Response
+  ) => Promise<CartResponse>
 
   /**
    * Searches for matching products

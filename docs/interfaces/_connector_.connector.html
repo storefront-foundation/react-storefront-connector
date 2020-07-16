@@ -93,15 +93,19 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#addtocart" class="tsd-kind-icon">add<wbr>ToCart</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#cart" class="tsd-kind-icon">cart</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#home" class="tsd-kind-icon">home</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#product" class="tsd-kind-icon">product</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#productslots" class="tsd-kind-icon">product<wbr>Slots</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#productsuggestions" class="tsd-kind-icon">product<wbr>Suggestions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#removecartitem" class="tsd-kind-icon">remove<wbr>Cart<wbr>Item</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#routes" class="tsd-kind-icon">routes</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#search" class="tsd-kind-icon">search</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#searchsuggestions" class="tsd-kind-icon">search<wbr>Suggestions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#session" class="tsd-kind-icon">session</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#subcategory" class="tsd-kind-icon">subcategory</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_connector_.connector.html#updatecart" class="tsd-kind-icon">update<wbr>Cart</a></li>
 							</ul>
 						</section>
 					</div>
@@ -110,12 +114,96 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="addtocart" class="tsd-anchor"></a>
+					<h3>add<wbr>ToCart</h3>
+					<div class="tsd-signature tsd-kind-icon">add<wbr>ToCart<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>product<span class="tsd-signature-symbol">: </span><a href="_productpagedata_.product.html" class="tsd-signature-type">Product</a>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L74">Connector.ts:74</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Adds product to cart</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>product<span class="tsd-signature-symbol">: </span><a href="_productpagedata_.product.html" class="tsd-signature-type">Product</a>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>product: <a href="_productpagedata_.product.html" class="tsd-signature-type">Product</a></h5>
+											</li>
+											<li>
+												<h5>quantity: <span class="tsd-signature-type">number</span></h5>
+											</li>
+											<li>
+												<h5>req: <span class="tsd-signature-type">Request</span></h5>
+											</li>
+											<li>
+												<h5>response: <span class="tsd-signature-type">Response</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="cart" class="tsd-anchor"></a>
+					<h3>cart</h3>
+					<div class="tsd-signature tsd-kind-icon">cart<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_result_.result.html" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L69">Connector.ts:69</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Returns data for the cart page</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_result_.result.html" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>req: <span class="tsd-signature-type">Request</span></h5>
+											</li>
+											<li>
+												<h5>response: <span class="tsd-signature-type">Response</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_result_.result.html" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="home" class="tsd-anchor"></a>
 					<h3>home</h3>
 					<div class="tsd-signature tsd-kind-icon">home<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_result_.result.html" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">&lt;</span><a href="_homepagedata_.homepagedata.html" class="tsd-signature-type">HomePageData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L23">Connector.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L25">Connector.ts:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -154,7 +242,7 @@
 					<div class="tsd-signature tsd-kind-icon">product<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="_productparams_.productparams.html" class="tsd-signature-type">ProductParams</a>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_result_.result.html" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">&lt;</span><a href="_productpagedata_.productpagedata.html" class="tsd-signature-type">ProductPageData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L37">Connector.ts:37</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L39">Connector.ts:39</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -196,7 +284,7 @@
 					<div class="tsd-signature tsd-kind-icon">product<wbr>Slots<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="_productslotsparams_.productslotsparams.html" class="tsd-signature-type">ProductSlotsParams</a>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, res<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="_cmsslots_.cmsslots.html" class="tsd-signature-type">CmsSlots</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L47">Connector.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L49">Connector.ts:49</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -239,7 +327,7 @@
 					<div class="tsd-signature tsd-kind-icon">product<wbr>Suggestions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_productpagedata_.product.html" class="tsd-signature-type">Product</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L52">Connector.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L54">Connector.ts:54</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -276,12 +364,54 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="removecartitem" class="tsd-anchor"></a>
+					<h3>remove<wbr>Cart<wbr>Item</h3>
+					<div class="tsd-signature tsd-kind-icon">remove<wbr>Cart<wbr>Item<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_cartitem_.cartitem.html" class="tsd-signature-type">CartItem</a>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L94">Connector.ts:94</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Removes item in the cart</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_cartitem_.cartitem.html" class="tsd-signature-type">CartItem</a>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>item: <a href="_cartitem_.cartitem.html" class="tsd-signature-type">CartItem</a></h5>
+											</li>
+											<li>
+												<h5>req: <span class="tsd-signature-type">Request</span></h5>
+											</li>
+											<li>
+												<h5>response: <span class="tsd-signature-type">Response</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="routes" class="tsd-anchor"></a>
 					<h3>routes</h3>
 					<div class="tsd-signature tsd-kind-icon">routes<span class="tsd-signature-symbol">:</span> <a href="_route_.route.html" class="tsd-signature-type">Route</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L79">Connector.ts:79</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L115">Connector.ts:115</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -299,7 +429,7 @@
 					<div class="tsd-signature tsd-kind-icon">search<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="_searchparams_.searchparams.html" class="tsd-signature-type">SearchParams</a>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_result_.result.html" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">&lt;</span><a href="_searchresult_.searchresult.html" class="tsd-signature-type">SearchResult</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L67">Connector.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L103">Connector.ts:103</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -341,7 +471,7 @@
 					<div class="tsd-signature tsd-kind-icon">search<wbr>Suggestions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_searchsuggestions_.searchsuggestions.html" class="tsd-signature-type">SearchSuggestions</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L57">Connector.ts:57</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L59">Connector.ts:59</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -383,7 +513,7 @@
 					<div class="tsd-signature tsd-kind-icon">session<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_session_.session.html" class="tsd-signature-type">Session</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L62">Connector.ts:62</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L64">Connector.ts:64</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -422,7 +552,7 @@
 					<div class="tsd-signature tsd-kind-icon">subcategory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>params<span class="tsd-signature-symbol">: </span><a href="_subcategoryparams_.subcategoryparams.html" class="tsd-signature-type">SubcategoryParams</a>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_result_.result.html" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">&lt;</span><a href="_subcategorypagedata_.subcategorypagedata.html" class="tsd-signature-type">SubcategoryPageData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/526fcf7/src/Connector.ts#L28">Connector.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L30">Connector.ts:30</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -458,6 +588,51 @@
 						</ul>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="updatecart" class="tsd-anchor"></a>
+					<h3>update<wbr>Cart</h3>
+					<div class="tsd-signature tsd-kind-icon">update<wbr>Cart<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_cartitem_.cartitem.html" class="tsd-signature-type">CartItem</a>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/react-storefront-community/react-storefront-connector/blob/e55373c/src/Connector.ts#L84">Connector.ts:84</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Updates the products in the cart</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="_cartitem_.cartitem.html" class="tsd-signature-type">CartItem</a>, quantity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, req<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Request</span>, response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Response</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>item: <a href="_cartitem_.cartitem.html" class="tsd-signature-type">CartItem</a></h5>
+											</li>
+											<li>
+												<h5>quantity: <span class="tsd-signature-type">number</span></h5>
+											</li>
+											<li>
+												<h5>req: <span class="tsd-signature-type">Request</span></h5>
+											</li>
+											<li>
+												<h5>response: <span class="tsd-signature-type">Response</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_cartresponse_.cartresponse.html" class="tsd-signature-type">CartResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -466,80 +641,8 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_appdata_.html">&quot;<wbr>App<wbr>Data&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_cart_.html">&quot;<wbr>Cart&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_cartitem_.html">&quot;<wbr>Cart<wbr>Item&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_cmsslots_.html">&quot;<wbr>Cms<wbr>Slots&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_color_.html">&quot;<wbr>Color&quot;</a>
-					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/_connector_.html">&quot;<wbr>Connector&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_homepagedata_.html">&quot;<wbr>Home<wbr>Page<wbr>Data&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_link_.html">&quot;<wbr>Link&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_media_.html">&quot;<wbr>Media&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_menuitem_.html">&quot;<wbr>Menu<wbr>Item&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_productmedia_.html">&quot;<wbr>Product<wbr>Media&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_productpagedata_.html">&quot;<wbr>Product<wbr>Page<wbr>Data&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_productparams_.html">&quot;<wbr>Product<wbr>Params&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_productslotsparams_.html">&quot;<wbr>Product<wbr>Slots<wbr>Params&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_productsummary_.html">&quot;<wbr>Product<wbr>Summary&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_result_.html">&quot;<wbr>Result&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_route_.html">&quot;<wbr>Route&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_searchparams_.html">&quot;<wbr>Search<wbr>Params&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_searchresult_.html">&quot;<wbr>Search<wbr>Result&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_searchsuggestions_.html">&quot;<wbr>Search<wbr>Suggestions&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_session_.html">&quot;<wbr>Session&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_size_.html">&quot;<wbr>Size&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_subcategorypagedata_.html">&quot;<wbr>Subcategory<wbr>Page<wbr>Data&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_subcategoryparams_.html">&quot;<wbr>Subcategory<wbr>Params&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_index_.html">&quot;index&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -551,6 +654,12 @@
 						<a href="_connector_.connector.html" class="tsd-kind-icon">Connector</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_connector_.connector.html#addtocart" class="tsd-kind-icon">add<wbr>ToCart</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_connector_.connector.html#cart" class="tsd-kind-icon">cart</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_connector_.connector.html#home" class="tsd-kind-icon">home</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -561,6 +670,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_connector_.connector.html#productsuggestions" class="tsd-kind-icon">product<wbr>Suggestions</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_connector_.connector.html#removecartitem" class="tsd-kind-icon">remove<wbr>Cart<wbr>Item</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_connector_.connector.html#routes" class="tsd-kind-icon">routes</a>
@@ -576,6 +688,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="_connector_.connector.html#subcategory" class="tsd-kind-icon">subcategory</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_connector_.connector.html#updatecart" class="tsd-kind-icon">update<wbr>Cart</a>
 							</li>
 						</ul>
 					</li>
