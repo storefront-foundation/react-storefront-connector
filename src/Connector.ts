@@ -110,7 +110,7 @@ export default interface Connector {
    * @param request The http request
    * @param response The http response
    */
-  updateCart: (
+  updateCartItem: (
     item: CartItem,
     quantity: number,
     request: Request,
