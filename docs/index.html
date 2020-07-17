@@ -76,13 +76,13 @@
 				<ul>
 					<li>Each <code>Connector</code> method represents an API called made by a typical React Storefront application.</li>
 					<li>Most methods returns a <code>Result</code>, which contains both app and page level data. App data is used to populate the main menu, navigation tabs, etc..., while page data is used to render the main body the specific page being viewed (product data, category data, etc...).</li>
-					<li>App level data only needs to be included when connector methods are called during server-side rendering. During server-side rendering, the request will contain the <code>_includeAppData=1</code> query parameter. The <code>react-storefront</code> package provides <a href="https://docs.reactstorefront.io/apiReference/props/fulfillAPIRequest">fulfillAPIRequest</a> method to help you return app data only during server-side rendering. You can see it in use in <code>react-storefront-magento2-connector</code> in the <a href="https://github.com/react-storefront-foundation/magento2-connector/blob/master/src/app/withAppData.js#L5">withAppData higher-order function</a>, which is used connector methods like <a href="https://github.com/react-storefront-foundation/magento2-connector/blob/master/src/product/product.js#L6">product</a>.</li>
+					<li>App level data only needs to be included when connector methods are called during server-side rendering. During server-side rendering, the request will contain the <code>_includeAppData=1</code> query parameter. The <code>react-storefront</code> package provides <a href="https://docs.reactstorefront.io/apiReference/props/fulfillAPIRequest">fulfillAPIRequest</a> method to help you return app data only during server-side rendering. You can see it in use in <code>react-storefront-magento2-connector</code> in the <a href="https://github.com/storefront-foundation/magento2-connector/blob/master/src/app/withAppData.js#L5">withAppData higher-order function</a>, which is used connector methods like <a href="https://github.com/storefront-foundation/magento2-connector/blob/master/src/product/product.js#L6">product</a>.</li>
 					<li>Connectors can contain additional methods beyond those specified in <code>react-storefront-connector</code>, but the default React Storefront starter app won&#39;t make use of them. Developers will need to add functionality to the app to take advantage of additional methods in the connector.</li>
 				</ul>
 				<a href="#example-implementation" id="example-implementation" style="color: inherit; text-decoration: none;">
 					<h2>Example Implementation</h2>
 				</a>
-				<p>For a reference implementation see <a href="https://github.com/react-storefront-foundation/magento2-connector">react-storefront-magento2-connector</a>.</p>
+				<p>For a reference implementation see <a href="https://github.com/storefront-foundation/magento2-connector">react-storefront-magento2-connector</a>.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
