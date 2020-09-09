@@ -10,7 +10,6 @@ import SearchParams from './SearchParams'
 import SearchResult from './SearchResult'
 import CmsSlots from './CmsSlots'
 import ProductSlotsParams from './ProductSlotsParams'
-import Route from './Route'
 import CartResponse from './CartResponse'
 import CartItem from './CartItem'
 import SignUpData from './SignUpData'
@@ -165,16 +164,4 @@ export default interface Connector {
    * @param response The http response
    */
   signUp: (data: SignUpData, request: Request, response: Response) => Promise<Session>
-
-  /**
-   * Routing rules that map express-style path expressions to next.js page routes. Use routes to map
-   * the URL used by the target platform to standard routes in the React Storefront starter app.
-   *
-   * For example, if the platform uses /products for product pages instead of /p, use:
-   *
-   * ```js
-   * [{ source: '/products/:productId', destination: '/p/[productId]' }]
-   * ```
-   */
-  routes: Route[]
 }
