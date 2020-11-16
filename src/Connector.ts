@@ -14,6 +14,7 @@ import Route from './Route'
 import CartResponse from './CartResponse'
 import CartItem from './CartItem'
 import SignUpData from './SignUpData'
+import PrerenderPath from './PrerenderPath'
 
 /**
  * The main connector interface. An implementation of this interface should be the default export from your
@@ -165,6 +166,12 @@ export default interface Connector {
    * @param response The http response
    */
   signUp: (data: SignUpData, request: Request, response: Response) => Promise<Session>
+
+  /**
+   * Fetches paths to prerender on deploy
+   * @param options Options for fetching which may be different for each connector
+   */
+  getPrerenderPaths: (options: object) => Promise<PrerenderPath[]>
 
   /**
    * Routing rules that map express-style path expressions to next.js page routes. Use routes to map
