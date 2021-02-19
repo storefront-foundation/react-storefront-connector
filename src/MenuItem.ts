@@ -38,5 +38,5 @@ export default interface MenuItem {
   /**
    * Child items
    */
-  items: Array<MenuItem>
+  items: MenuItem[]
 }
